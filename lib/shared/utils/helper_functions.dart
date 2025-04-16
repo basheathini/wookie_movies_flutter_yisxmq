@@ -7,7 +7,7 @@ Map<String, List<Movie>> groupMoviesByCategory(List<Movie> movies) {
       if (!groupedMovies.containsKey(genre)) {
         groupedMovies[genre] = [];
       }
-      groupedMovies[genre]!.add(movie);
+      groupedMovies[genre]?.add(movie);
     }
   }
   return groupedMovies;

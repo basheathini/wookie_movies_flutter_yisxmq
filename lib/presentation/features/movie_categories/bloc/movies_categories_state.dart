@@ -2,16 +2,11 @@ import 'package:equatable/equatable.dart';
 import 'package:wookie_movies_flutter_yisxmq/business/entities/movie.dart';
 
 sealed class MoviesCategoriesState extends Equatable {
-  final List<Movie> movies;
 
-  const MoviesCategoriesState({
-    this.movies = const [],
-  });
+  const MoviesCategoriesState();
 
   @override
-  List<Object> get props => [
-        movies,
-      ];
+  List<Object> get props => [];
 }
 
 class MovieCategoriesLoading extends MoviesCategoriesState {

@@ -47,7 +47,7 @@ class DetailedMovieScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      '${movie?.title ?? ''}${ '  (${movie!.imdb_rating.toStringAsFixed(1)})'}',
+                      '${movie?.title ?? ''}${ '  (${movie!.imdbRating.toStringAsFixed(1)})'}',
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                         softWrap: false,

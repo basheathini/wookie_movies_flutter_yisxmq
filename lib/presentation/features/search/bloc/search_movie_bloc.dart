@@ -17,6 +17,7 @@ class SearchMovieBloc extends Bloc<SearchMovieEvent, SearchMovieState> {
       SearchQueryChanged event,
       Emitter<SearchMovieState> emit,
       ) async {
+
     _debounceTimer?.cancel();
 
     if (event.query.isEmpty) {
@@ -30,7 +31,7 @@ class SearchMovieBloc extends Bloc<SearchMovieEvent, SearchMovieState> {
         emit(SearchLoading());
         final result = await searchMovies(event.query);
         if (emit.isDone) return;
-        result.fold((failure) => emit(SearchError(failure.message)), (movies) => movies.isEmpty ? emit(const SearchEmpty()) : emit(SearchLoaded(movies)),
+        result.fold((failure) => emit(SearchError(failure.message)), (movies) => movies.isEmpty ? emit(const SearchEmpty('Ops...No movie found')) : emit(SearchLoaded(movies)),
         );
       } catch (e) {
         if (!emit.isDone) emit(SearchError(e.toString()));

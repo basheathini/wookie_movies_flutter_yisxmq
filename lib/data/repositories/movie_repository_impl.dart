@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import '../../business/entities/movie.dart';
 import '../../business/repositories/movie_repository.dart';
 import '../../shared/errors/api_exceptions.dart';
-import '../datasources/movie_data_source.dart';
+import '../datasources/movie_remote_data_source.dart';
 
 class MovieRepositoryImpl implements MovieRepository {
   final MovieRemoteDataSource remoteDataSource;

@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:wookie_movies_flutter_yisxmq/business/entities/movie.dart';
-import 'package:wookie_movies_flutter_yisxmq/data/datasources/movie_data_source.dart';
+import 'package:wookie_movies_flutter_yisxmq/data/datasources/movie_remote_data_source.dart';
 import 'package:wookie_movies_flutter_yisxmq/data/models/movie_model.dart';
 import 'package:wookie_movies_flutter_yisxmq/data/repositories/movie_repository_impl.dart';
 import 'package:wookie_movies_flutter_yisxmq/shared/errors/api_exceptions.dart';
@@ -25,9 +25,9 @@ void main() {
       classification: 'PG-13',
       director: ['Joaquim Dos Santos', 'Kemp Powers', 'Justin K. Thompson'],
       genres: ['Family/Action'],
-      imdb_rating: 8.4,
+      imdbRating: 8.4,
       poster: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7lwIPrJJySz-YBguA6CZYb5uGnHy2iAZEi0ZI3MtOGufwHLIx',
-      released_on: '2018-07-16',
+      releasedOn: '2018-07-16',
       slug: 'Spider-Man'),
     MovieModel(
       id: '1235',
@@ -38,9 +38,9 @@ void main() {
       classification: 'PG-13',
       director: ['Jon Watts'],
       genres: ['Family/Action'],
-      imdb_rating: 7.4,
+      imdbRating: 7.4,
       poster: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7lwIPrJJySz-YBguA6CZYb5uGnHy2iAZEi0ZI3MtOGufwHLIx',
-      released_on: '2019-07-02',
+      releasedOn: '2019-07-02',
       slug: 'Spider-Man',
     ),
   ];

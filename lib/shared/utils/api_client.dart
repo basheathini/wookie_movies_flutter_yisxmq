@@ -9,18 +9,14 @@ class ApiClient {
   ApiClient({required this.client});
 
   Future<Map<String, dynamic>> get(String endpoint) async {
-    try {
-      final response = await client.get(
-        Uri.parse('${ApiConstants.baseUrl}$endpoint'),
-        headers: {
-          'Authorization': 'Bearer ${ApiConstants.bearerKey}',
-          'Content-Type': 'application/json',
-        },
-      );
-      return _handleResponse(response);
-    } catch (e) {
-      throw ServerException(message: e.toString());
-    }
+    final response = await client.get(
+      Uri.parse('${ApiConstants.baseUrl}$endpoint'),
+      headers: {
+        'Authorization': 'Bearer ${ApiConstants.bearerKey}',
+        'Content-Type': 'application/json',
+      },
+    );
+    return _handleResponse(response);
   }
 
   Map<String, dynamic> _handleResponse(http.Response response) {

@@ -35,8 +35,9 @@ class SearchError extends SearchMovieState {
 
 
 class SearchEmpty extends SearchMovieState {
+  final String message;
 
-  const SearchEmpty();
+  const SearchEmpty(this.message);
 
   @override
   List<Object> get props => [];

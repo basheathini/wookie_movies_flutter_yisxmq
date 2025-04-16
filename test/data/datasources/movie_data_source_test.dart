@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:wookie_movies_flutter_yisxmq/data/datasources/movie_data_source.dart';
+import 'package:wookie_movies_flutter_yisxmq/data/datasources/movie_remote_data_source.dart';
 import 'package:wookie_movies_flutter_yisxmq/data/models/movie_model.dart';
 import 'package:wookie_movies_flutter_yisxmq/shared/constants/api.dart';
 import 'package:wookie_movies_flutter_yisxmq/shared/utils/api_client.dart';

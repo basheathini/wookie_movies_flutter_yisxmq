@@ -10,9 +10,7 @@ class MovieCategoriesBloc extends Bloc<MovieCategoriesEvent, MoviesCategoriesSta
     on<LoadInitialMovies>((event, emit) async {
       emit(const MovieCategoriesLoading());
       final result = await getMovies();
-      result.fold(
-        (failure) => emit(MovieCategoriesError(failure.message)),
-        (movies) => emit(MovieCategoriesLoaded(movies)),
+      result.fold((failure) => emit(MovieCategoriesError(failure.message)), (movies) => emit(MovieCategoriesLoaded(movies)),
       );
     });
   }

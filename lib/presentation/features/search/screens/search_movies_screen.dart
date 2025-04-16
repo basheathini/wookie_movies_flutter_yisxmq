@@ -38,7 +38,7 @@ class SearchMoviesScreen extends StatelessWidget {
             return Center(child: Text(state.message));
           }
           if(state is SearchEmpty) {
-            return Center(child: Text('Ops...No movie found', style: TextStyles.text.copyWith(fontSize: 16)));
+            return Center(child: Text(state.message, style: TextStyles.text.copyWith(fontSize: 16)));
           }
           if (state is SearchLoaded) {
             return ListView.builder(
@@ -63,7 +63,7 @@ class SearchMoviesScreen extends StatelessWidget {
                       ),
                     ),
                     title: Text(movie.title),
-                    subtitle: Text(movie.released_on),
+                    subtitle: Text(movie.releasedOn),
                     onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(

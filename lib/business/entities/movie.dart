@@ -7,9 +7,9 @@ class Movie {
   final String classification;
   final List<String> director;
   final List<dynamic> genres;
-  final double imdb_rating;
+  final double imdbRating;
   final String poster;
-  final String released_on;
+  final String releasedOn;
   final String slug;
   final String? year;
   final String? length;
@@ -23,9 +23,9 @@ class Movie {
     required this.classification,
     required this.director,
     required this.genres,
-    required this.imdb_rating,
+    required this.imdbRating,
     required this.poster,
-    required this.released_on,
+    required this.releasedOn,
     required this.slug,
     this.year,
     this.length

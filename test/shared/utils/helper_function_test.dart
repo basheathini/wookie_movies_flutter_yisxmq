@@ -20,9 +20,9 @@ void main() {
         backdrop: '',
         classification: '',
         director: [],
-        imdb_rating: 0,
+        imdbRating: 0,
         poster: '',
-        released_on: '',
+        releasedOn: '',
         slug: '',
       );
       final result = groupMoviesByCategory([movie]);
@@ -40,9 +40,9 @@ void main() {
         backdrop: '',
         classification: '',
         director: [],
-        imdb_rating: 0,
+        imdbRating: 0,
         poster: '',
-        released_on: '',
+        releasedOn: '',
         slug: '',
       );
 
@@ -62,9 +62,9 @@ void main() {
         backdrop: '',
         classification: '',
         director: [],
-        imdb_rating: 0,
+        imdbRating: 0,
         poster: '',
-        released_on: '',
+        releasedOn: '',
         slug: '',
       );
 
@@ -77,9 +77,9 @@ void main() {
         backdrop: '',
         classification: '',
         director: [],
-        imdb_rating: 0,
+        imdbRating: 0,
         poster: '',
-        released_on: '',
+        releasedOn: '',
         slug: '',
       );
 
@@ -98,9 +98,9 @@ void main() {
         backdrop: '',
         classification: '',
         director: [],
-        imdb_rating: 0,
+        imdbRating: 0,
         poster: '',
-        released_on: '',
+        releasedOn: '',
         slug: '',
       );
 
@@ -121,9 +121,9 @@ void main() {
       backdrop: '',
       classification: '',
       genres: [],
-      imdb_rating: 0,
+      imdbRating: 0,
       poster: '',
-      released_on: '',
+      releasedOn: '',
       slug: '',
     );
 

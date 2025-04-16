@@ -21,9 +21,6 @@ void main() {
 
   setUp(() {
     registerFallbackValue(Uri());
-  });
-
-  setUp(() {
     mockHttpClient = MockHttpClient();
     apiClient = ApiClient(client: mockHttpClient);
   });

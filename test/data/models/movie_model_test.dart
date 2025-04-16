@@ -42,8 +42,8 @@ void main() {
         expect(movie.classification, isNull);
         expect(movie.director, []);
         expect(movie.genres, []);
-        expect(movie.imdb_rating, isNull);
-        expect(movie.released_on, isNull);
+        expect(movie.imdbRating, isNull);
+        expect(movie.releasedOn, isNull);
         expect(movie.slug, isNull);
         expect(movie.year, isNull);
         expect(movie.length, isNull);
@@ -60,7 +60,17 @@ void main() {
 
     group('toEntity', () {
       test('should convert to entity with defaults for null values', () {
-        final model = MovieModel(id: '123456');
+        final model = MovieModel(
+            id: '123456',
+            title: '',
+            overview: '',
+            cast: [],
+            backdrop: '',
+            classification: '',
+            director: [],
+            genres: [], imdbRating: 0, poster: '',
+            releasedOn: '', slug: ''
+        );
         final entity = model.toEntity();
 
         expect(entity.id, '123456');
@@ -71,9 +81,9 @@ void main() {
         expect(entity.classification, '');
         expect(entity.director, []);
         expect(entity.genres, []);
-        expect(entity.imdb_rating, 0.0);
+        expect(entity.releasedOn, 0.0);
         expect(entity.poster, '');
-        expect(entity.released_on, '');
+        expect(entity.releasedOn, '');
         expect(entity.slug, '');
         expect(entity.year, '');
         expect(entity.length, '');
@@ -87,7 +97,7 @@ void main() {
         expect(entity.overview, 'After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos actions and restore balance to the universe.');
         expect(entity.cast, hasLength(3));
         expect(entity.director, hasLength(2));
-        expect(entity.imdb_rating, 8.4);
+        expect(entity.imdbRating, 8.4);
       });
     });
   });

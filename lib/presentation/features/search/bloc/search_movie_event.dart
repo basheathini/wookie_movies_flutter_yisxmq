@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-abstract class SearchMovieEvent extends Equatable {
+sealed class SearchMovieEvent extends Equatable {
   const SearchMovieEvent();
 }
 
